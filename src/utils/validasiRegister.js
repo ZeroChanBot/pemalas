@@ -268,10 +268,10 @@ module.exports = async function (body, subject) {
   const token = jwt.sign(data, process.env.JWT_VERIFY, { expiresIn: "1h" });
 
   let mailOptions = {
-    from: "noreplyzrapi@gmail.com",
+    from: "zyxmapleapi@gmail.com",
     to: email,
     subject: subject,
-    html: html(`http://api-pemalas.herokuapp.com/auth/verify/${token}`),
+    html: html(`http://zyxmaple-restes1.herokuapp.com/auth/verify/${token}`),
   };
 
   mail.sendMail(mailOptions, function (error, info) {
