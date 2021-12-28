@@ -10,11 +10,13 @@ const createError = require("http-errors");
 
 const { berapaView, tambahView } = require("./model/ViewModel");
 const { totalUser } = require("./model/UsersModel");
+const { PemalasDB } = require("./config/db");
 const errorHandlerMiddleware = require("./middleware/errorHandlerMiddleware");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+PemalasDB();
 app.engine("ejs", viewsEngine);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
