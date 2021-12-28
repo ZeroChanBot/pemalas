@@ -18,8 +18,6 @@ const app = express();
 
 PemalasDB();
 
-app.set('trust proxy', 1);
-
 app.engine("ejs", viewsEngine);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
