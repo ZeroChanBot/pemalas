@@ -14,4 +14,4 @@ function PemalasDB() {
     });
 };
 
-module.exports = PemalasDB;
+module.exports.PemalasDB = PemalasDB;
