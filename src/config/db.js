@@ -3,7 +3,7 @@ const monk = require("monk");
 const mongoose = require('mongoose');
 const url = config.mongoUrl;
 function PemalasDB() {
-    mongoose.connect(dbURI, { 
+    mongoose.connect(url, { 
       useNewUrlParser: true, 
       useUnifiedTopology: true
     });
